@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterArt | Производство рекламы и изделий на заказ</title>
+  <meta
+    name="description"
+    content="MasterArt — производство наружной рекламы, лазерная и фрезерная резка, баннеры, вывески, стенды, оформление и изготовление изделий на заказ в Кызылорде."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="/webapp/styles.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow-one"></div>
+  <div class="bg-glow bg-glow-two"></div>
+
+  <header class="header container">
+    <a class="brand" href="#top">
+      <span class="brand-mark">MA</span>
+      <span class="brand-title">MasterArt</span>
+    </a>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#services">Услуги</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#projects">Как работаем</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container reveal">
+      <div class="hero-layout">
+        <div>
+          <p class="eyebrow">ПРОИЗВОДСТВО РЕКЛАМЫ И ИЗДЕЛИЙ НА ЗАКАЗ</p>
+          <h1>Делаем конструкции, вывески и рекламные решения, которые реально продают</h1>
+          <p class="hero-text">
+            MasterArt проектирует, производит и монтирует наружную и интерьерную рекламу,
+            стенды, таблички, баннеры, декоративные и технические изделия. От идеи и макета до готовой установки.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#lead-form">Оставить заявку</a>
+            <a class="btn btn-ghost" href="#catalog">Смотреть каталог</a>
+            <a class="btn btn-ghost" id="hero-whatsapp" target="_blank" rel="noreferrer" href="#">WhatsApp</a>
+          </div>
+          <div class="hero-points">
+            <span>Собственное производство</span>
+            <span>Быстрые сроки</span>
+            <span>Дизайн + изготовление + монтаж</span>
+          </div>
+        </div>
+        <aside class="hero-panel glass">
+          <p class="panel-label">БЫСТРЫЙ РАСЧЁТ</p>
+          <h3>Опишите задачу — поможем подобрать формат и сориентируем по цене</h3>
+          <ul class="mini-list">
+            <li>Вывески и наружная реклама</li>
+            <li>Баннеры, стенды, таблички</li>
+            <li>Лазерная и фрезерная резка</li>
+            <li>Дизайн, печать, монтаж</li>
+          </ul>
+          <a class="btn btn-primary block" href="#lead-form">Получить консультацию</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="stats-grid">
+        <article class="stat-card glass"><strong>1 день</strong><span>На первичный расчёт и предложение</span></article>
+        <article class="stat-card glass"><strong>Под ключ</strong><span>Дизайн, производство, доставка и монтаж</span></article>
+        <article class="stat-card glass"><strong>Гибко</strong><span>От простых табличек до сложных конструкций</span></article>
+        <article class="stat-card glass"><strong>Локально</strong><span>Быстро работаем по Кызылорде и региону</span></article>
+      </div>
+    </section>
+
+    <section id="catalog" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">ЧТО ИЗГОТАВЛИВАЕМ</p>
+        <h2>Каталог направлений</h2>
+        <p class="section-text">Структура как у сильного производственного сайта: клиент сразу видит, что вообще можно заказать, а не угадывает по намёкам.</p>
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+    </section>
+
+    <section id="services" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">НАШИ УСЛУГИ</p>
+        <h2>Полный цикл работ</h2>
+      </div>
+      <div class="services-grid" id="services-grid"></div>
+    </section>
+
+    <section id="cases" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">ЧТО ПОЛУЧАЕТ КЛИЕНТ</p>
+        <h2>Типовые задачи, которые мы закрываем</h2>
+      </div>
+      <div class="cases-grid" id="cases-grid"></div>
+    </section>
+
+    <section id="projects" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">КАК МЫ РАБОТАЕМ</p>
+        <h2>Понятный сценарий для клиента</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card glass"><span>01</span><h3>Заявка</h3><p>Клиент пишет в WhatsApp или оставляет заявку на сайте.</p></article>
+        <article class="step-card glass"><span>02</span><h3>Уточнение</h3><p>Собираем размеры, материал, адрес, сроки и пожелания по дизайну.</p></article>
+        <article class="step-card glass"><span>03</span><h3>Расчёт и макет</h3><p>Предлагаем вариант исполнения, сроки и ориентир по стоимости.</p></article>
+        <article class="step-card glass"><span>04</span><h3>Производство и монтаж</h3><p>Изготавливаем, доставляем и при необходимости устанавливаем.</p></article>
+      </div>
+    </section>
+
+    <section id="benefits" class="section container reveal">
+      <div class="feature">
+        <div class="section-head compact">
+          <p class="eyebrow">ПОЧЕМУ MASTERART</p>
+          <h2>Не просто красиво, а полезно для продаж</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-item"><h3>Под ключ</h3><p>От идеи и дизайна до готового монтажа без беготни между подрядчиками.</p></article>
+          <article class="benefit-item"><h3>Гибкость</h3><p>Делаем как типовые заказы, так и нестандартные конструкции под задачу бизнеса.</p></article>
+          <article class="benefit-item"><h3>Скорость</h3><p>Оперативно отвечаем, считаем и запускаем в производство без затяжного цирка.</p></article>
+          <article class="benefit-item"><h3>Локальное производство</h3><p>Удобно для клиентов из Кызылорды и nearby: быстрее согласования и контроль качества.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="cta-banner glass">
+        <div>
+          <p class="eyebrow">НУЖНО БЫСТРО?</p>
+          <h2>Напишите в WhatsApp — подскажем формат, материалы и сроки</h2>
+          <p class="section-text small">Если нет точных размеров — тоже нормально. Поможем определиться по фото, адресу или описанию задачи.</p>
+        </div>
+        <a class="btn btn-primary" id="cta-whatsapp" target="_blank" rel="noreferrer" href="#">Открыть WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="lead-form" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">ЗАЯВКА</p>
+        <h2>Оставьте задачу — мы свяжемся и предложим решение</h2>
+      </div>
+      <form class="lead-form glass" id="brief-form">
+        <div class="form-grid">
+          <label>
+            <span>Ваше имя</span>
+            <input type="text" id="customerName" placeholder="Как к вам обращаться">
+          </label>
+          <label>
+            <span>Телефон / WhatsApp</span>
+            <input type="text" id="customerPhone" placeholder="+7 7XX XXX XX XX">
+          </label>
+          <label>
+            <span>Что нужно изготовить?</span>
+            <select id="serviceType"></select>
+          </label>
+          <label>
+            <span>Материал</span>
+            <select id="material"></select>
+          </label>
+          <label>
+            <span>Ширина (см)</span>
+            <input type="number" id="widthCm" min="1" value="100">
+          </label>
+          <label>
+            <span>Высота (см)</span>
+            <input type="number" id="heightCm" min="1" value="100">
+          </label>
+          <label>
+            <span>Количество</span>
+            <input type="number" id="quantity" min="1" value="1">
+          </label>
+          <label>
+            <span>Срочность (дней)</span>
+            <input type="number" id="urgencyDays" min="1" value="5">
+          </label>
+          <label>
+            <span>Доставка</span>
+            <select id="deliveryType">
+              <option value="pickup">Самовывоз</option>
+              <option value="delivery">Доставка</option>
+            </select>
+          </label>
+          <label class="checkbox-field">
+            <input type="checkbox" id="hasDesign">
+            <span>Нужен дизайн / макет</span>
+          </label>
+        </div>
+        <label>
+          <span>Комментарий</span>
+          <textarea id="notes" rows="5" placeholder="Например: вывеска для магазина, нужен монтаж, сроки до конца недели..."></textarea>
+        </label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Рассчитать ориентировочно</button>
+          <a class="btn btn-ghost" id="form-whatsapp" target="_blank" rel="noreferrer" href="#">Отправить в WhatsApp</a>
+        </div>
+      </form>
+      <div class="estimate-box glass" id="estimate-box">
+        <p class="estimate-label">Онлайн-оценка</p>
+        <h3 id="estimate-total">Заполните форму выше</h3>
+        <p id="estimate-detail">После этого покажем ориентировочную стоимость и следующий шаг.</p>
+        <p id="lead-status" class="lead-status"></p>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="faq-wrap glass">
+        <div class="section-head compact">
+          <p class="eyebrow">FAQ</p>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Можно ли без готового макета?</summary>
+            <p>Да. У нас можно заказать и саму конструкцию, и разработку макета под производство.</p>
+          </details>
+          <details>
+            <summary>Если я не знаю точные размеры?</summary>
+            <p>Напишите хотя бы примерные данные. Для старта хватит фото, адреса или описания места установки.</p>
+          </details>
+          <details>
+            <summary>Делаете ли монтаж?</summary>
+            <p>Да, если задача этого требует. Сначала уточняем объект, затем закладываем монтаж в предложение.</p>
+          </details>
+          <details>
+            <summary>Это финальная цена на сайте?</summary>
+            <p>Нет, это предварительная оценка. Точная стоимость зависит от материалов, объёма, сложности и монтажа.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">КОНТАКТЫ</p>
+        <h2>Как с нами связаться</h2>
+      </div>
+      <div class="address-grid">
+        <article class="address-card">
+          <p class="label">ОФИС</p>
+          <p>Н.Назарбаева 20<br>SMALL сауда үйі</p>
+        </article>
+        <article class="address-card">
+          <p class="label">ОФИС</p>
+          <p>Қорқыт ата 28а<br>Қызылорда супермаркеті</p>
+        </article>
+        <article class="address-card">
+          <p class="label">ЦЕХ</p>
+          <p>Мичурина 24/1</p>
+        </article>
+        <article class="address-card contact-card">
+          <p class="label">СВЯЗЬ</p>
+          <p><a href="tel:+77766779595">+7 776 677 95 95</a></p>
+          <p><a id="contact-whatsapp" target="_blank" rel="noreferrer" href="#">WhatsApp</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>MasterArt — производство рекламы и изделий на заказ</p>
+    <p>Кызылорда • Дизайн • Производство • Монтаж</p>
+  </footer>
+
+  <script src="/webapp/app.js"></script>
+</body>
+</html>
