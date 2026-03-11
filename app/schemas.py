@@ -178,3 +178,13 @@ class ConfirmDealRequest(BaseModel):
 class ConfirmDealResponse(BaseModel):
     lead_id: int
     message: str
+
+
+class AssistantChatRequest(BaseModel):
+    message: str = Field(min_length=2, max_length=2000)
+    language: Language = Language.RU
+
+
+class AssistantChatResponse(BaseModel):
+    reply: str
+

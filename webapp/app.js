@@ -302,3 +302,76 @@ populateSelect(serviceTypeSelect, serviceTypeOptions, serviceTypeLabels);
 populateSelect(materialSelect, materialOptions, materialLabels);
 bindFormListeners();
 attachWhatsappLinks();
+
+const aiChatToggle = document.getElementById('ai-chat-toggle');
+const aiChatWidget = document.getElementById('ai-chat-widget');
+const aiChatClose = document.getElementById('ai-chat-close');
+const aiChatMessages = document.getElementById('ai-chat-messages');
+const aiChatForm = document.getElementById('ai-chat-form');
+const aiChatInput = document.getElementById('ai-chat-input');
+
+function appendChatMessage(role, text) {
+  if (!aiChatMessages) return;
+  const el = document.createElement('div');
+  el.className = `ai-msg ${role}`;
+  el.textContent = text;
+  aiChatMessages.appendChild(el);
+  aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+}
+
+async function askAssistant(message) {
+  const response = await fetch('/api/assistant/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message, language: 'ru' }),
+  });
+
+  if (!response.ok) {
+    throw new Error('assistant_unavailable');
+  }
+
+  return response.json();
+}
+
+function openChat() {
+  if (!aiChatWidget) return;
+  aiChatWidget.classList.remove('hidden');
+  if (aiChatMessages && aiChatMessages.childElementCount === 0) {
+    appendChatMessage('bot', 'Здравствуйте! Я ИИ ваш личный консультант Жибек. Чем могу помочь?');
+  }
+  aiChatInput?.focus();
+}
+
+function closeChat() {
+  aiChatWidget?.classList.add('hidden');
+}
+
+aiChatToggle?.addEventListener('click', () => {
+  if (aiChatWidget?.classList.contains('hidden')) {
+    openChat();
+  } else {
+    closeChat();
+  }
+});
+
+aiChatClose?.addEventListener('click', closeChat);
+
+aiChatForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const message = aiChatInput?.value.trim();
+  if (!message) return;
+
+  appendChatMessage('user', message);
+  aiChatInput.value = '';
+  aiChatInput.disabled = true;
+
+  try {
+    const data = await askAssistant(message);
+    appendChatMessage('bot', data.reply || 'Не удалось получить ответ, попробуйте еще раз.');
+  } catch {
+    appendChatMessage('bot', 'Сейчас не удалось ответить автоматически. Напишите в WhatsApp: +7 776 677 95 95.');
+  } finally {
+    aiChatInput.disabled = false;
+    aiChatInput.focus();
+  }
+});

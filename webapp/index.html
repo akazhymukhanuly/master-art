@@ -269,6 +269,26 @@
     <p>Кызылорда • Дизайн • Производство • Монтаж</p>
   </footer>
 
+  <button id="ai-chat-toggle" class="ai-chat-toggle" aria-label="Open AI consultant">
+    <span class="ai-dot"></span>
+    <span>AI consultant Zhibek</span>
+  </button>
+
+  <section id="ai-chat-widget" class="ai-chat-widget hidden" aria-live="polite">
+    <header class="ai-chat-header">
+      <div>
+        <p class="ai-chat-label">MasterArt AI</p>
+        <h3>Zhibek, personal consultant</h3>
+      </div>
+      <button id="ai-chat-close" class="ai-chat-close" aria-label="Close chat">x</button>
+    </header>
+    <div id="ai-chat-messages" class="ai-chat-messages"></div>
+    <form id="ai-chat-form" class="ai-chat-form">
+      <input id="ai-chat-input" type="text" placeholder="Write your question..." maxlength="500" autocomplete="off">
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </section>
+
   <script src="/webapp/app.js"></script>
 </body>
 </html>

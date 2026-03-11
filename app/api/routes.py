@@ -5,6 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db import get_db
 from app.models import Lead
 from app.schemas import (
+    AssistantChatRequest,
+    AssistantChatResponse,
     ConfirmDealRequest,
     ConfirmDealResponse,
     ConceptsRequest,
@@ -23,7 +25,7 @@ from app.schemas import (
     TradeoffRequest,
 )
 from app.security import require_internal_api_key
-from app.services.ai_assistant import build_lead_summary
+from app.services.ai_assistant import assistant_reply, build_lead_summary
 from app.services.concepts import build_concepts, tune_tradeoff
 from app.services.creative import generate_creative_copy
 from app.services.intake import parse_client_intake
@@ -37,6 +39,12 @@ router = APIRouter()
 async def healthz(db: AsyncSession = Depends(get_db)) -> dict[str, str]:
     await db.execute(select(1))
     return {"status": "ok"}
+
+
+@router.post("/assistant/chat", response_model=AssistantChatResponse)
+async def assistant_chat(payload: AssistantChatRequest) -> AssistantChatResponse:
+    reply = await assistant_reply(payload)
+    return AssistantChatResponse(reply=reply)
 
 
 @router.post("/estimate", response_model=PriceEstimateResponse)
